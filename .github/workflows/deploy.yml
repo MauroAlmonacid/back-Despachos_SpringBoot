@@ -24,7 +24,7 @@ jobs:
 
       - name: Build y Push a ECR
         run: |
-          docker build -t api-despachos .
+          docker build -t api-despachos Springboot-API-REST-DESPACHO
           docker tag api-despachos:latest ${{ secrets.ECR_REPO_URL_DESPACHOS }}:latest
           docker push ${{ secrets.ECR_REPO_URL_DESPACHOS }}:latest
 
